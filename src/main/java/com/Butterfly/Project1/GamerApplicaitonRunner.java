@@ -2,6 +2,7 @@ package com.Butterfly.Project1;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 
 import com.Butterfly.Project1.game.GameRunner;
 import com.Butterfly.Project1.game.GamingConsole;
@@ -9,14 +10,12 @@ import com.Butterfly.Project1.game.MarioGame;
 import com.Butterfly.Project1.game.PacMan;
 import com.Butterfly.Project1.game.SuperContra;
 
-//Introduced configuration class and created spring context for the games 
-//Creating objects in spring context by self -- need to improve
+
+//Added the Component Annotation to the Supercontra game class and useed componentscan to 
+// let spring handle the creation of object and autowire it
+
+@ComponentScan("package com.Butterfly.Project1.game")
 public class GamerApplicaitonRunner {
-	
-	@Bean
-	public GamingConsole game() {
-		return new SuperContra(); //Creating Object by our own
-	}
 	
 	@Bean
 	public GameRunner gameRunner(GamingConsole game) {
