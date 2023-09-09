@@ -16,13 +16,7 @@ import com.Butterfly.Project1.game.SuperContra;
 
 @ComponentScan("package com.Butterfly.Project1.game")
 public class GamerApplicaitonRunner {
-	
-	@Bean
-	public GameRunner gameRunner(GamingConsole game) {
-		var gameRunner = new GameRunner(game);
-		return gameRunner;
-	}
-	
+		
 	public static void main(String[] args) {
 		try( var context = 
 				new AnnotationConfigApplicationContext(
