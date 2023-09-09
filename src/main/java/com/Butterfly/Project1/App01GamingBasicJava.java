@@ -12,6 +12,7 @@ public class App01GamingBasicJava {
 		
 		var context = new AnnotationConfigApplicationContext(GameConfiguration.class);
 		
+		
 //		var marioGame = new MarioGame();
 		var superContraGame = new SuperContra();
 		var pacmanGame = new PacMan();
