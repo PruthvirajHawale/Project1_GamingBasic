@@ -15,3 +15,4 @@ public class SuperContra implements GamingConsole{
 	}
 
 }
+	
