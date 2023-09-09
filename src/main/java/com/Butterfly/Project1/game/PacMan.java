@@ -1,5 +1,8 @@
 package com.Butterfly.Project1.game;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class PacMan implements GamingConsole {
 
 	
