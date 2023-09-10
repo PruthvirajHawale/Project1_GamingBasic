@@ -11,13 +11,23 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 class YourBusinessClass {
 
-	@Autowired
 	Dependency1 d1;
 
-	@Autowired
 	Dependency2 d2;
 
+	@Autowired
+	public void setD1(Dependency1 d1) {
+		this.d1 = d1;
+	}
+
+	@Autowired
+	public void setD2(Dependency2 d2) {
+		System.out.println("Setter Injection - setDependency1 ");
+		this.d2 = d2;
+	}
+
 	public String toString() {
+		System.out.println("Setter Injection - setDependency2 ");
 		return "Using " + d1 + " and " + d2 + "Dependencies";
 	}
 
