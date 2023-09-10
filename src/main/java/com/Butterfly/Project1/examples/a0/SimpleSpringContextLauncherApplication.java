@@ -15,14 +15,11 @@ class YourBusinessClass {
 
 	Dependency2 d2;
 
-	@Autowired
-	public void setD1(Dependency1 d1) {
-		this.d1 = d1;
-	}
 
 	@Autowired
-	public void setD2(Dependency2 d2) {
-		System.out.println("Setter Injection - setDependency1 ");
+	public YourBusinessClass(Dependency1 d1, Dependency2 d2) {
+		super();
+		this.d1 = d1;
 		this.d2 = d2;
 	}
 
